@@ -1,0 +1,45 @@
+{% load static %}
+
+<style>
+  .hello-msg{
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px;
+  }
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+     <img class="logo" src="{% static './images/logo.png'%}">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link active" href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'contact' %}">Contacts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'scenaries' %}">Scenaries
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'booking' %}">Booking
+            </a>
+          </li>
+        </ul>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" id="#Search"><a href="accounts/Search">Search</a></button>
+          <button class="btn btn-outline-success" type="submit" id="#login"><a href ="/accounts/login">login</a><button>
+          <a href="/accounts/register" class="btn btn-outline-success" type="button">register</a>
+      </div>
+    </div>
+
+    <span class="hello-msg">Hello, {{request.user}}</span>
+    <span><a class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+  </nav>

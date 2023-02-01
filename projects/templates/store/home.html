@@ -1,0 +1,28 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    Hi{{ user.username}}!
+    <p><a href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+    <p>You are not logged in</p>
+    <a href="/accounts/login/">Log In</a>
+{% endif %}
+
+<body class="img" style="background-image: url(static/images/shifaaz-shamoon-qtbV_8P_Ksk-unsplash.jpg)"></body>
+  
+
+<div class="me">
+<h1>Book online via this site</h1>
+<h1>This travel website is suitable for both local and international tourists.It both satisfies the user and the clients.></h1>
+</div>
+
+      
+   
+
+
+
+
+{% endblock content %}

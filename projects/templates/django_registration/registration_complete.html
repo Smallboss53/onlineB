@@ -1,0 +1,8 @@
+{% extends 'store/base.html' %}
+
+
+{% block content %}
+
+<h1>Welcome{{user.username}}! press icon below to navigate to home</h1>
+<a href="{% url 'home' %}">home</a>
+{% endblock %}

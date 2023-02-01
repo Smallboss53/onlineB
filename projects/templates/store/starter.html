@@ -1,0 +1,49 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Connect With Us</h1>
+    <p>Feel free to contact us for we are ready to serve you and respond to your queries accordingly</p>
+    <div class="contact-box">
+        <div class="contact-left">
+            <h3>Your request</h3>
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="Brian Misango">
+                </div>
+            </div>
+
+        </div>
+        <div class="contact-right">
+            <h3>Reach us</h3>
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Phone</label>
+                    <input type="text" placeholder="+ 254 723134515">
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="text" placeholder="brianmisango@gmail.com">
+                </div>
+            </div>
+
+        </div>
+        <div class="contact-right">
+            <h3>Reach us</h3>
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="Product Demo">
+                    
+                    <button>submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}

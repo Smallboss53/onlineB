@@ -1,0 +1,75 @@
+{% extends 'store/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<body >
+    <div class="form">
+        <div class="text">
+            <h1>BOOK WITH US NOW</h1>
+            <P>We offer the best services with affordable prices without biasness</P>
+
+        </div>
+        <div class="main-form">
+            <form id="Booking-form" action="" method="post">
+
+                (% csrf_token %)
+                <div>
+                    <span>Hote name?</span>
+                    <select name="Hote" id="Hote">
+                        <option value=""><---Hotel---></option>
+                        <option value="Diani">Diani</option>
+                        <option value="Manyata">Manyata</option>
+                        <option value="Fogo Gauch">Fogo Gauch</option>
+                        <option value="Yanga Hotel">Yanga Hotel</option>
+                        <option value="Diani">Diani</option>
+                    </select>
+                </div>  
+                <div>
+                    <span>Your full name?</span>
+                    <input type="text" name="name" id="none" placeholder="write your name here..." required>
+                </div>
+                <div>
+                    <span>Your Email Address?</span>
+                    <input type="email" name="email" id="email" placeholder="write your email here..." required>
+                </div>
+                <div>
+                    <span>How many people?</span>
+                    <select name="people" id="people">
+                        <option value=""><---people---></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div>
+                    <span>What time?</span>
+                    <input type="text" name="time" id="time" placeholder="time" >
+                </div>
+                <div>
+                    <span>What is the date?</span>
+                    <input type="date" name="date" id="date" placeholder="date" required>
+                </div>
+                <div>
+                    <span>What is your phone number</span>
+                    <input type="number" name="number" id="number" placeholder="write your number here..." required>
+                </div>
+                <div>
+                    <label for="id_check_in">Check In :</label>
+                    <input type="datetime-local" name="check_in" id="id_check_in" placeholder="datetime-local" required>
+                </div>
+                <div>
+                    <label for="id_check_out">Check Out :</label>
+                    <input type="datetime-local" name="check_out" id="id_check_out" placeholder="datetime-local" required>
+                </div>
+                <div class="submit">
+                   <button type="submit">Book The Hotel</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</body>
+{% endblock%}

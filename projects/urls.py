@@ -1,7 +1,7 @@
 from atexit import register
 from django.urls import path
-from .import views
-from .views import HotelListView,BookingList,BookingView,HotelDetailView,HotelList
+from . import views
+#from . views import HotelListView,BookingList,BookingView,HotelDetailView,HotelList
 
 app_name='projects'
 
@@ -14,9 +14,9 @@ urlpatterns=[
     path('login',views.login,name='login'),
     path('register',views.register,name='register'),
     path('logout',views.logout,name='logout'),
-    path('hotel_list/',HotelList.as_view(),name='HotelList'),
-    path('booking_list/',BookingList.as_view,name='BookingList'),
-    path('book',BookingView.as_view,name='BookingView'),
-    path('hotel/<category>',HotelDetailView.as_view,name='HotelDetailView'),
+    path('hotel_list/',views.HotelListView.as_view(),name='HotelList'),
+    path('booking_list/',views.BookingList.as_view,name='BookingList'),
+    path('book',views.BookingView.as_view,name='BookingView'),
+    path('hotel/<category>',views.HotelDetailView.as_view,name='HotelDetailView'),
    # path('project/<str:pk>',views.project,name="project"),
 ]

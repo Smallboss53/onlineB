@@ -85,7 +85,7 @@ class HotelListView(ListView):
 class BookingList(ListView):
     model = Booking
 
-class HotelDetaiView(View):
+class HotelDetailView(View):
     def get(self,request, *args, **kwargs):
         category = self.kwargs.get('category', None)
         form = AvailabilityForm()
